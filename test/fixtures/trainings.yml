@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tyvek_size: MyString
+  cdl: 2014-05-24
+  forklift: 2014-05-24
+  passport: 2014-05-24
+  twic: 2014-05-24
+  chevron_bpso_opo: 2014-05-24
+  exxon: 2014-05-24
+  msha: 2014-05-24
+  chevron_powerline: 2014-05-24
+  oxy_psm_haz: 2014-05-24
+  pdc_pass: 2014-05-24
+  nccco_crane_operator: 2014-05-24
+  medical_exam_certificate: 2014-05-24
+  api_rp2d_rigger_training: 2014-05-24
+  oecp: 2014-05-24
+
+two:
+  name: MyString
+  tyvek_size: MyString
+  cdl: 2014-05-24
+  forklift: 2014-05-24
+  passport: 2014-05-24
+  twic: 2014-05-24
+  chevron_bpso_opo: 2014-05-24
+  exxon: 2014-05-24
+  msha: 2014-05-24
+  chevron_powerline: 2014-05-24
+  oxy_psm_haz: 2014-05-24
+  pdc_pass: 2014-05-24
+  nccco_crane_operator: 2014-05-24
+  medical_exam_certificate: 2014-05-24
+  api_rp2d_rigger_training: 2014-05-24
+  oecp: 2014-05-24

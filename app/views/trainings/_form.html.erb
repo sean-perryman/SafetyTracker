@@ -1,0 +1,81 @@
+<%= form_for(@training) do |f| %>
+  <% if @training.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@training.errors.count, "error") %> prohibited this training from being saved:</h2>
+
+      <ul>
+      <% @training.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :tyvek_size %><br>
+    <%= f.text_field :tyvek_size %>
+  </div>
+  <div class="field">
+    <%= f.label :cdl %><br>
+    <%= f.date_select :cdl %>
+  </div>
+  <div class="field">
+    <%= f.label :forklift %><br>
+    <%= f.date_select :forklift %>
+  </div>
+  <div class="field">
+    <%= f.label :passport %><br>
+    <%= f.date_select :passport %>
+  </div>
+  <div class="field">
+    <%= f.label :twic %><br>
+    <%= f.date_select :twic %>
+  </div>
+  <div class="field">
+    <%= f.label :chevron_bpso_opo %><br>
+    <%= f.date_select :chevron_bpso_opo %>
+  </div>
+  <div class="field">
+    <%= f.label :exxon %><br>
+    <%= f.date_select :exxon %>
+  </div>
+  <div class="field">
+    <%= f.label :msha %><br>
+    <%= f.date_select :msha %>
+  </div>
+  <div class="field">
+    <%= f.label :chevron_powerline %><br>
+    <%= f.date_select :chevron_powerline %>
+  </div>
+  <div class="field">
+    <%= f.label :oxy_psm_haz %><br>
+    <%= f.date_select :oxy_psm_haz %>
+  </div>
+  <div class="field">
+    <%= f.label :pdc_pass %><br>
+    <%= f.date_select :pdc_pass %>
+  </div>
+  <div class="field">
+    <%= f.label :nccco_crane_operator %><br>
+    <%= f.date_select :nccco_crane_operator %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_exam_certificate %><br>
+    <%= f.date_select :medical_exam_certificate %>
+  </div>
+  <div class="field">
+    <%= f.label :api_rp2d_rigger_training %><br>
+    <%= f.date_select :api_rp2d_rigger_training %>
+  </div>
+  <div class="field">
+    <%= f.label :oecp %><br>
+    <%= f.date_select :oecp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
