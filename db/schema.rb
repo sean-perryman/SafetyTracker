@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140525001644) do
+ActiveRecord::Schema.define(version: 20140602145156) do
 
   create_table "trainings", force: true do |t|
     t.string   "name"
@@ -32,6 +32,20 @@ ActiveRecord::Schema.define(version: 20140525001644) do
     t.date     "oecp"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "has_cdl"
+    t.boolean  "has_forklift"
+    t.boolean  "has_passport"
+    t.boolean  "has_twic"
+    t.boolean  "has_chevron_bpso_opo"
+    t.boolean  "has_exxon"
+    t.boolean  "has_msha"
+    t.boolean  "has_chevron_powerline"
+    t.boolean  "has_oxy_psm_haz"
+    t.boolean  "has_pdc_pass"
+    t.boolean  "has_nccco_crane_operator"
+    t.boolean  "has_medical_exam_certificate"
+    t.boolean  "has_api_rp2d_rigger_training"
+    t.boolean  "has_oecp"
   end
 
 end

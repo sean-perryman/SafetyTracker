@@ -1,4 +1,4 @@
-<%= form_for(@training) do |f| %>
+<%= simple_form_for(@training, html: {role: "form", class: "form-horizontal"}) do |f| %>
   <% if @training.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@training.errors.count, "error") %> prohibited this training from being saved:</h2>
@@ -10,72 +10,73 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :tyvek_size %><br>
-    <%= f.text_field :tyvek_size %>
-  </div>
-  <div class="field">
-    <%= f.label :cdl %><br>
-    <%= f.date_select :cdl %>
-  </div>
-  <div class="field">
-    <%= f.label :forklift %><br>
-    <%= f.date_select :forklift %>
-  </div>
-  <div class="field">
-    <%= f.label :passport %><br>
-    <%= f.date_select :passport %>
-  </div>
-  <div class="field">
-    <%= f.label :twic %><br>
-    <%= f.date_select :twic %>
-  </div>
-  <div class="field">
-    <%= f.label :chevron_bpso_opo %><br>
-    <%= f.date_select :chevron_bpso_opo %>
-  </div>
-  <div class="field">
-    <%= f.label :exxon %><br>
-    <%= f.date_select :exxon %>
-  </div>
-  <div class="field">
-    <%= f.label :msha %><br>
-    <%= f.date_select :msha %>
-  </div>
-  <div class="field">
-    <%= f.label :chevron_powerline %><br>
-    <%= f.date_select :chevron_powerline %>
-  </div>
-  <div class="field">
-    <%= f.label :oxy_psm_haz %><br>
-    <%= f.date_select :oxy_psm_haz %>
-  </div>
-  <div class="field">
-    <%= f.label :pdc_pass %><br>
-    <%= f.date_select :pdc_pass %>
-  </div>
-  <div class="field">
-    <%= f.label :nccco_crane_operator %><br>
-    <%= f.date_select :nccco_crane_operator %>
-  </div>
-  <div class="field">
-    <%= f.label :medical_exam_certificate %><br>
-    <%= f.date_select :medical_exam_certificate %>
-  </div>
-  <div class="field">
-    <%= f.label :api_rp2d_rigger_training %><br>
-    <%= f.date_select :api_rp2d_rigger_training %>
-  </div>
-  <div class="field">
-    <%= f.label :oecp %><br>
-    <%= f.date_select :oecp %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="center-block">
+    <div class="container-fluid">
+      <div class="row">
+        <%= f.input :name, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %> 
+      </div>
+      <div class="row">
+        <%= f.input :tyvek_size, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' }  %>
+      </div>
+      <div class="row">
+        <%= f.input :has_cdl, label: "Has CDL?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :cdl, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-sm-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_forklift, label: "Has Forklift?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :forklift, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_passport, label: "Has Passport?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :passport, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_twic, label: "Has TWIC?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :twic, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_chevron_bpso_opo, label: "Has Chevron BPSO OPO?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :chevron_bpso_opo, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_exxon, label: "Has Exxon?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :exxon, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_msha, label: "Has MSHA?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :msha, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_chevron_powerline, label: "Has Chevron Powerline?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :chevron_powerline, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' }%>
+      </div>
+      <div class="row">
+        <%= f.input :has_oxy_psm_haz, label: "Has Oxy PSM Haz?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :oxy_psm_haz, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_pdc_pass, label: "Has PDC Pass?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :pdc_pass, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_nccco_crane_operator, label: "Has NCCCO Crane Operator?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :nccco_crane_operator, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_medical_exam_certificate, label: "Has Medical Exam Certification?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :medical_exam_certificate, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_api_rp2d_rigger_training, label: "Has API RP2D Rigger Training?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :api_rp2d_rigger_training, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.input :has_oecp, label: "Has OECP?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :oecp, label: "CDL", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-2 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      </div>
+      <div class="row">
+        <%= f.button :submit, :class => 'btn-default col-md-2 col-md-offset-4' %>
+      </div>
+    </div>
   </div>
 <% end %>
