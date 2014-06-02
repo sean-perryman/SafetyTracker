@@ -1,31 +1,50 @@
 <h1>Listing trainings</h1>
 
-<table>
+<div class="table-responsive">
+  <table class="table table-hover table-condensed">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Tyvek size</th>
-      <th>Cdl</th>
+      <th>Tyvek Size</th>
+      <th>CDL</th>
       <th>Forklift</th>
       <th>Passport</th>
-      <th>Twic</th>
-      <th>Chevron bpso opo</th>
+      <th>TWIC</th>
+      <th>Chevron BPSO OPO</th>
       <th>Exxon</th>
-      <th>Msha</th>
-      <th>Chevron powerline</th>
-      <th>Oxy psm haz</th>
-      <th>Pdc pass</th>
-      <th>Nccco crane operator</th>
-      <th>Medical exam certificate</th>
-      <th>Api rp2d rigger training</th>
-      <th>Oecp</th>
+      <th>MSHA</th>
+      <th>Chevron Powerline</th>
+      <th>Oxy PSM Haz</th>
+      <th>PDC Pass</th>
+      <th>NCCCO Crane Operator</th>
+      <th>Medical Exam Certificate</th>
+      <th>API RP2D Rigger Training</th>
+      <th>OECP</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @trainings.each do |training| %>
-      <tr>
+      <% @row_class = 'none' %>
+      <% %w{cdl forklift passport twic chevron_bpso_opo exxon msha chevron_powerline oxy_psm_haz pdc_pass nccco_crane_operator medical_exam_certificate api_rp2d_rigger_training oecp}.each do |field_name| %>
+          
+          <% if training[field_name] < 30.days.from_now %>
+            <% if training[field_name] < 15.days.from_now %>
+              <% @row_class = 'danger' %>
+              <% break %>
+            <% else %>
+              <% @row_class = 'warning' %>
+              <% break %>
+            <% end %>
+          <% else %>
+            <% if @row_class == 'none' %>
+              <% @row_class = 'success' %>
+            <% end %>
+          <% end %>
+
+      <% end %>
+      <tr class='<%= @row_class %>' data-link="<%= training_path(training) %>">
         <td><%= training.name %></td>
         <td><%= training.tyvek_size %></td>
         <td><%= training.cdl %></td>
@@ -42,9 +61,9 @@
         <td><%= training.medical_exam_certificate %></td>
         <td><%= training.api_rp2d_rigger_training %></td>
         <td><%= training.oecp %></td>
-        <td><%= link_to 'Show', training %></td>
-        <td><%= link_to 'Edit', edit_training_path(training) %></td>
-        <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', training, :class => 'btn btn-default table_buttons' %></td>
+        <td><%= link_to 'Edit', edit_training_path(training), :class => 'btn btn-default table_buttons' %></td>
+        <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default table_buttons' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -52,4 +71,4 @@
 
 <br>
 
-<%= link_to 'New Training', new_training_path %>
+<%= link_to 'New Training', new_training_path, :class => "btn btn-default" %>

@@ -1,6 +1,7 @@
 <h1>Editing training</h1>
 
+<script>showDateFields();</script>
 <%= render 'form' %>
 
-<%= link_to 'Show', @training %> |
-<%= link_to 'Back', trainings_path %>
+<%= link_to 'Show', @training, :class => "btn btn-default" %> |
+<%= link_to 'Back', trainings_path, :class => "btn btn-default" %>

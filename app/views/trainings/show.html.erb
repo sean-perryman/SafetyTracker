@@ -1,84 +1,189 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @training.name %>
-</p>
+<div class="table-responsive">
+  <table class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Tyvek size</th>
+        <th>Cdl</th>
+        <th>Forklift</th>
+        <th>Passport</th>
+        <th>Twic</th>
+        <th>Chevron bpso opo</th>
+        <th>Exxon</th>
+        <th>Msha</th>
+        <th>Chevron powerline</th>
+        <th>Oxy psm haz</th>
+        <th>Pdc pass</th>
+        <th>Nccco crane operator</th>
+        <th>Medical exam certificate</th>
+        <th>Api rp2d rigger training</th>
+        <th>Oecp</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-<p>
-  <strong>Tyvek size:</strong>
-  <%= @training.tyvek_size %>
-</p>
+    <tbody>
+      <tr>
+        <td><%= @training.name %></td>
+        <td><%= @training.tyvek_size %></td>
+        <td <% if @training.cdl < 30.days.from_now %>
+              <% if @training.cdl < 15.days.from_now %>
+                class="danger"
+              <% else %>
+                class="warning"
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.cdl %></td>
 
-<p>
-  <strong>Cdl:</strong>
-  <%= @training.cdl %>
-</p>
+        <td <% if @training.forklift < 30.days.from_now %>
+              <% if @training.forklift < 15.days.from_now %>
+                class="danger"
+              <% else %>
+                class="warning"
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.forklift %></td>
 
-<p>
-  <strong>Forklift:</strong>
-  <%= @training.forklift %>
-</p>
+        <td <% if @training.passport < 30.days.from_now %>
+              <% if @training.passport < 15.days.from_now %>
+                class="danger"
+              <% else %>
+                class="warning"
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.passport %></td>
 
-<p>
-  <strong>Passport:</strong>
-  <%= @training.passport %>
-</p>
+        <td <% if @training.twic < 30.days.from_now %>
+              <% if @training.twic < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.twic %></td>
+        
+        <td <% if @training.chevron_bpso_opo < 30.days.from_now %>
+              <% if @training.chevron_bpso_opo < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.chevron_bpso_opo %></td>
 
-<p>
-  <strong>Twic:</strong>
-  <%= @training.twic %>
-</p>
+        <td <% if @training.exxon < 30.days.from_now %>
+              <% if @training.exxon < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.exxon %></td>
 
-<p>
-  <strong>Chevron bpso opo:</strong>
-  <%= @training.chevron_bpso_opo %>
-</p>
+        <td <% if @training.msha < 30.days.from_now %>
+              <% if @training.msha < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.msha %></td>
 
-<p>
-  <strong>Exxon:</strong>
-  <%= @training.exxon %>
-</p>
+        <td <% if @training.chevron_powerline < 30.days.from_now %>
+              <% if @training.chevron_powerline < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.chevron_powerline %></td>
 
-<p>
-  <strong>Msha:</strong>
-  <%= @training.msha %>
-</p>
+        <td <% if @training.oxy_psm_haz < 30.days.from_now %>
+              <% if @training.oxy_psm_haz < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.oxy_psm_haz %></td>
 
-<p>
-  <strong>Chevron powerline:</strong>
-  <%= @training.chevron_powerline %>
-</p>
+        <td <% if @training.pdc_pass < 30.days.from_now %>
+              <% if @training.pdc_pass < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.pdc_pass %></td>
 
-<p>
-  <strong>Oxy psm haz:</strong>
-  <%= @training.oxy_psm_haz %>
-</p>
+        <td <% if @training.nccco_crane_operator < 30.days.from_now %>
+              <% if @training.nccco_crane_operator < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.nccco_crane_operator %></td>
 
-<p>
-  <strong>Pdc pass:</strong>
-  <%= @training.pdc_pass %>
-</p>
+        <td <% if @training.medical_exam_certificate < 30.days.from_now %>
+              <% if @training.medical_exam_certificate < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.medical_exam_certificate %></td>
 
-<p>
-  <strong>Nccco crane operator:</strong>
-  <%= @training.nccco_crane_operator %>
-</p>
+        <td <% if @training.api_rp2d_rigger_training < 30.days.from_now %>
+              <% if @training.api_rp2d_rigger_training < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.api_rp2d_rigger_training %></td>
 
-<p>
-  <strong>Medical exam certificate:</strong>
-  <%= @training.medical_exam_certificate %>
-</p>
-
-<p>
-  <strong>Api rp2d rigger training:</strong>
-  <%= @training.api_rp2d_rigger_training %>
-</p>
-
-<p>
-  <strong>Oecp:</strong>
-  <%= @training.oecp %>
-</p>
-
-<%= link_to 'Edit', edit_training_path(@training) %> |
-<%= link_to 'Back', trainings_path %>
+        <td <% if @training.oecp < 30.days.from_now %>
+              <% if @training.oecp < 15.days.from_now %>
+                class='danger'
+              <% else %>
+                class='warning'
+              <% end %>
+            <% else %>
+              class="success"
+            <% end %>
+        ><%= @training.oecp %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<%= link_to 'Edit', edit_training_path(@training), :class => "btn btn-default" %> |
+<%= link_to 'Back', trainings_path, :class => "btn btn-default" %>
