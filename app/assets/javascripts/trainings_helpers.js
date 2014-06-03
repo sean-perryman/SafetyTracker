@@ -52,8 +52,19 @@ function hideDateFields() {
   });
 };
 
-$(document).ready( function() {
-    $("tr[data-link]").click( function() {
-      window.location = this.dataset.link;
-    });
+$("tr[data-link]").click( function() {
+  window.location = this.dataset.link;
 });
+
+$(document).ready(function () {
+    $(".main_row").hover(
+        function() {
+            //$(this).find("a").addClass( "table_buttons" );
+            $(this).find("a").show();
+        }, function() {
+            //$(this).find("a").removeClass( "table_buttons" );
+            $(this).find("a").hide();
+        }
+    );
+});
+
