@@ -16,6 +16,12 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use simple form
 gem 'simple_form'
 
+#Carrierwave to compliment Cloundinary
+gem 'carrierwave'
+
+#Cloudinary for image management
+gem 'cloudinary'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

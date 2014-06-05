@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602145156) do
+ActiveRecord::Schema.define(version: 20140603210859) do
 
   create_table "trainings", force: true do |t|
     t.string   "name"
@@ -46,6 +46,21 @@ ActiveRecord::Schema.define(version: 20140602145156) do
     t.boolean  "has_medical_exam_certificate"
     t.boolean  "has_api_rp2d_rigger_training"
     t.boolean  "has_oecp"
+    t.string   "user_image"
+    t.string   "cdl_image"
+    t.string   "forklift_image"
+    t.string   "passport_image"
+    t.string   "twic_image"
+    t.string   "chevron_bpso_opo_image"
+    t.string   "exxon_image"
+    t.string   "msha_image"
+    t.string   "chevron_powerline_image"
+    t.string   "oxy_psm_haz_image"
+    t.string   "pdc_pass_image"
+    t.string   "nccco_crane_operator_image"
+    t.string   "medical_exam_certificate_image"
+    t.string   "api_rp2d_rigger_training_image"
+    t.string   "oecp_image"
   end
 
 end
