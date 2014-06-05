@@ -10,73 +10,72 @@
       </ul>
     </div>
   <% end %>
-  <div class="center-block">
-    <div class="container-fluid">
-      <div class="row">
-        <%= f.input :name, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %> 
-      </div>
-      <div class="row">
-        <%= f.input :tyvek_size, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' }  %>
-      </div>
-      <div class="row">
-        <%= f.input :has_cdl, label: "Has CDL?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :cdl, label: "CDL Expiration Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_forklift, label: "Has Forklift?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :forklift, label: "Forklift Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_passport, label: "Has Passport?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :passport, label: "Passport Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_twic, label: "Has TWIC?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :twic, label: "TWIC Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_chevron_bpso_opo, label: "Has Chevron BPSO OPO?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :chevron_bpso_opo, label: "Chevron BPSO OPO Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_exxon, label: "Has Exxon?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :exxon, label: "Exxon Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_msha, label: "Has MSHA?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :msha, label: "MSHA Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_chevron_powerline, label: "Has Chevron Powerline?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :chevron_powerline, label: "Chevron Powerline Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' }%>
-      </div>
-      <div class="row">
-        <%= f.input :has_oxy_psm_haz, label: "Has Oxy PSM Haz?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :oxy_psm_haz, label: "Oxy PSM Haz Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_pdc_pass, label: "Has PDC Pass?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :pdc_pass, label: "PDC Pass Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_nccco_crane_operator, label: "Has NCCCO Crane Operator?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :nccco_crane_operator, label: "NCCCO Crane Operator Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_medical_exam_certificate, label: "Has Medical Exam Certification?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :medical_exam_certificate, label: "Medical Exam Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_api_rp2d_rigger_training, label: "Has API RP2D Rigger Training?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :api_rp2d_rigger_training, label: "API RP2D Rigger Training Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.input :has_oecp, label: "Has OECP?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-        <%= f.input :oecp, label: "OECP Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
-      </div>
-      <div class="row">
-        <%= f.button :submit, :class => 'btn-default col-md-2 col-md-offset-4' %>
-      </div>
+  <div class="container">
+    <div class="row">
+      <%= f.input :name, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %> 
+    </div>
+    <div class="row">
+      <%= f.input :tyvek_size, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' }  %>
+    </div>
+    <div class="row">
+      <%= f.input :has_cdl, label: "Has CDL?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :cdl, label: "CDL Expiration Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_forklift, label: "Has Forklift?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :forklift, label: "Forklift Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_passport, label: "Has Passport?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :passport, label: "Passport Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_twic, label: "Has TWIC?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :twic, label: "TWIC Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_chevron_bpso_opo, label: "Has Chevron BPSO OPO?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :chevron_bpso_opo, label: "Chevron BPSO OPO Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_exxon, label: "Has Exxon?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :exxon, label: "Exxon Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_msha, label: "Has MSHA?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :msha, label: "MSHA Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_chevron_powerline, label: "Has Chevron Powerline?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :chevron_powerline, label: "Chevron Powerline Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' }%>
+    </div>
+    <div class="row">
+      <%= f.input :has_oxy_psm_haz, label: "Has Oxy PSM Haz?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :oxy_psm_haz, label: "Oxy PSM Haz Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_pdc_pass, label: "Has PDC Pass?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :pdc_pass, label: "PDC Pass Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_nccco_crane_operator, label: "Has NCCCO Crane Operator?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :nccco_crane_operator, label: "NCCCO Crane Operator Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_medical_exam_certificate, label: "Has Medical Exam Certification?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :medical_exam_certificate, label: "Medical Exam Certification Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_api_rp2d_rigger_training, label: "Has API RP2D Rigger Training?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :api_rp2d_rigger_training, label: "API RP2D Rigger Training Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.input :has_oecp, label: "Has OECP?", label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+      <%= f.input :oecp, label: "OECP Date", wrapper_html: { class: "hidden" }, label_html: { class: 'col-md-4 col-md-offset-1' }, input_html: { class: 'col-md-1' } %>
+    </div>
+    <div class="row">
+      <%= f.button :submit, :class => 'btn-default col-md-2 col-md-offset-4' %>
     </div>
   </div>
+  
 <% end %>
