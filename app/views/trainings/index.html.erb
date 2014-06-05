@@ -1,30 +1,11 @@
-
-
-<%= cl_image_tag("preset_folder/svmoo5fisk4ie7qt31go.jpg", :width => 100, :height => 150, :crop => :fill) %>
-
 <h1>All Employees</h1>
 
-<div class="table-responsive">
+<div class="table-responsive well">
   <table class="table table-hover table-condensed">
   <thead>
-    <tr class="fuck">
+    <tr>
+      <th>Picture</th>
       <th>Name</th>
-      <th>Tyvek Size</th>
-      <th>CDL</th>
-      <th>Forklift</th>
-      <th>Passport</th>
-      <th>TWIC</th>
-      <th>Chevron BPSO OPO</th>
-      <th>Exxon</th>
-      <th>MSHA</th>
-      <th>Chevron Powerline</th>
-      <th>Oxy PSM Haz</th>
-      <th>PDC Pass</th>
-      <th>NCCCO Crane Operator</th>
-      <th>Medical Exam Certificate</th>
-      <th>API RP2D Rigger Training</th>
-      <th>OECP</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -49,25 +30,9 @@
 
       <% end %>
       <tr class='main_row <%= @row_class %>' data-link="<%= training_path(training) %>">
+        <td><%= cl_image_tag("preset_folder/podlnns8cqw88187vaxh.jpg", :width => 150, :height => 200, :crop => :fill, :class => 'employee-picture') %></td>
         <td><%= training.name %></td>
-        <td><%= training.tyvek_size %></td>
-        <td><%= training.cdl %></td>
-        <td><%= training.forklift %></td>
-        <td><%= training.passport %></td>
-        <td><%= training.twic %></td>
-        <td><%= training.chevron_bpso_opo %></td>
-        <td><%= training.exxon %></td>
-        <td><%= training.msha %></td>
-        <td><%= training.chevron_powerline %></td>
-        <td><%= training.oxy_psm_haz %></td>
-        <td><%= training.pdc_pass %></td>
-        <td><%= training.nccco_crane_operator %></td>
-        <td><%= training.medical_exam_certificate %></td>
-        <td><%= training.api_rp2d_rigger_training %></td>
-        <td><%= training.oecp %></td>
-        <td><%= link_to 'Show', training, :class => 'btn btn-default table_buttons' %></td>
-        <td><%= link_to 'Edit', edit_training_path(training), :class => 'btn btn-default table_buttons' %></td>
-        <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default table_buttons' %></td>
+        <td><%= link_to 'Show', training, :class => 'btn btn-default' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -75,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Training', new_training_path, :class => "btn btn-default" %>
+<%= link_to 'New Employee', new_training_path, :class => "btn btn-default" %>
