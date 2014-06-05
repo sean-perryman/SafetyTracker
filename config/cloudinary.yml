@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lbqqyqpzd
+  api_key: '252878367289291'
+  api_secret: bnrmvGkTyt4GABto1caawL_6B2I
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: lbqqyqpzd
+  api_key: '252878367289291'
+  api_secret: bnrmvGkTyt4GABto1caawL_6B2I
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: lbqqyqpzd
+  api_key: '252878367289291'
+  api_secret: bnrmvGkTyt4GABto1caawL_6B2I
+  enhance_image_tag: true
+  static_image_support: false
