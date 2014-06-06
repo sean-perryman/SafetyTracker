@@ -32,7 +32,7 @@
       <tr class='main_row <%= @row_class %>' data-link="<%= training_path(training) %>">
         <td><%= cl_image_tag("preset_folder/podlnns8cqw88187vaxh.jpg", :width => 150, :height => 200, :crop => :fill, :class => 'employee-picture') %></td>
         <td><%= training.name %></td>
-        <td><%= link_to 'Show', training, :class => 'btn btn-default' %></td>
+        <td><%= link_to 'Show', training, :class => 'btn btn-default hidden' %></td>
       </tr>
     <% end %>
   </tbody>
