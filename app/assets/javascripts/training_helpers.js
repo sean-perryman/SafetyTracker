@@ -32,6 +32,7 @@ function showDateFields() {
 }
 
 function hideDateFields() {
+    alert("test");
     $('.training_cdl').addClass('hidden');
     $('.training_forklift').addClass('hidden');
     $('.training_passport').addClass('hidden');
