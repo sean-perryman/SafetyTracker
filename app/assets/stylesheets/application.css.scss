@@ -14,6 +14,10 @@
  *= require_self
  */
 
+
+@import 'bootstrap';
+@import 'bootstrap/theme';
+
 body {
 	padding-top: 70px;
 }
@@ -23,6 +27,8 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+	$font-size-base: 28px;
+	
 	body {
 		padding-top: 100px;
 	}
