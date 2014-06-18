@@ -38,7 +38,7 @@ table {
 	}
 
 	p {
-		margin-top: 10px;
+		margin-top: 20px;
 		font-size: 4em;
 	}
 
@@ -59,7 +59,17 @@ table {
 
 	a {
 		margin: auto;
-		width: 75%;
-		height: 50%;
+		width: 90%;
+		height: auto;
+	}
+
+	.show_p {
+		td {
+			font-size: .6em;
+		}
+	}
+
+	.button-font {
+		font-size: 1em;
 	}
 }

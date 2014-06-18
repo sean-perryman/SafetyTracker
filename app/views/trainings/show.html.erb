@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <div class="well">
-  <table class="table-responsive">
-    <tr><td>Name</td><td><%= @training.name %></td></tr>
-    <tr><td>Tyvek Size</td><td><%= @training.tyvek_size %></td></tr>
+  <table class="table table-hover table-responsive show_p">
+    <tr><td>Name</td><td><%= @training.name %></p></td></td></tr>
+    <!--<tr><td>Tyvek Size</td><td><%= @training.tyvek_size %></td></tr>-->
     <tr class="<%= @training_cdl_class %>"><td>CDL</td><td><%= @training.cdl %></td></tr>
     <tr class="<%= @training_forklift_class %>"><td>Forklift</td><td><%= @training.forklift %></td></tr>
     <tr class="<%= @training_passport_class %>"><td>Passport</td><td><%= @training.passport %></td></tr>
@@ -21,5 +21,5 @@
   </table>
 </div>
 
-<%= link_to 'Edit', edit_training_path(@training), :class => "btn btn-default" %> |
-<%= link_to 'Back', trainings_path, :class => "btn btn-default" %>
+<%= link_to 'Edit', edit_training_path(@training), :class => "btn btn-default button-font center-block" %> |
+<%= link_to 'Back', trainings_path, :class => "btn btn-default button-font center-block" %>
