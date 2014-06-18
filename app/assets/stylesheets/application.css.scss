@@ -43,7 +43,7 @@ table {
 }
 
 @media screen and (max-width: 1024px) {
-	th, .index-title, nav, .new-employee-button, .edit-button {
+	th, .index-title, nav, .new-employee-button, .edit-button, .employee-picture, .pic-table-cell {
 		display: none;
 	}
 
@@ -54,7 +54,8 @@ table {
 
 	p {
 		margin-top: 20px;
-		font-size: 4em;
+		font-size: 4.5em;
+		padding: 10px 10px;
 	}
 
 	table, th, td, tr {
@@ -75,12 +76,16 @@ table {
 		width: 100%;
 	}
 
-	.employee-picture {
+	.employee-name-label {
+		font-size: 1.5em;
+	}
+
+	/*.employee-picture {
 		width: 50px;
 		height: auto;
 		float: none;
 		margin: auto;
-	}
+	}*/
 
 	.show_p {
 		td {
@@ -89,7 +94,7 @@ table {
 	}
 
 	.button-font {
-		font-size: 1.25em;
+		font-size: 2em;
 	}
 
 	.checkbox-size {

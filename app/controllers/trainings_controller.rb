@@ -168,7 +168,7 @@ class TrainingsController < ApplicationController
         @training_api_rp2d_rigger_training_class='warning'
       end
     else
-      @training_api_rp2d_rigger_trainingclass="success"
+      @training_api_rp2d_rigger_training_class="success"
     end
 
 

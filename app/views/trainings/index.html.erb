@@ -10,7 +10,7 @@
   <tbody>
     <% @trainings.each do |training| %>
       <tr class='main_row <%= @row_class %>' data-link="<%= training_path(training) %>">
-        <td><%= cl_image_tag("preset_folder/podlnns8cqw88187vaxh.jpg", :width => 150, :height => 200, :crop => :fill, :class => 'employee-picture center-block') %></td>
+        <td class="pic-table-cell"><%= cl_image_tag("preset_folder/podlnns8cqw88187vaxh.jpg", :width => 150, :height => 200, :crop => :fill, :class => 'employee-picture center-block') %></td>
         <td><p class="center-block"><%= training.name %></p></td>
       </tr>
     <% end %>
