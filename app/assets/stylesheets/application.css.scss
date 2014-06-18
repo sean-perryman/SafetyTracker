@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+$font-size-base: 14px;
 
 @import 'bootstrap';
 @import 'bootstrap/theme';
@@ -21,20 +21,44 @@
 body {
 	padding-top: 70px;
 }
-
+table {
+	margin: auto;
+	width: 50%;
+}
 .employee-picture {
-	border: 2px solid black;
+	border: 1px solid black;
+	float: left;
 }
 
 @media screen and (max-width: 800px) {
-	$font-size-base: 28px;
-	
+
 	body {
-		padding-top: 100px;
+		padding-top: 20px;
+		font-size: 50px;
+	}
+
+	p {
+		font-size: 2em;
+	}
+
+	table, th, td, tr {
+		border: 2px solid black;
+	}
+
+	th, .index_title, nav {
+		display: none;
 	}
 
 	.employee-picture {
 		width: 50px;
 		height: auto;
+		float: none;
+		margin: auto;
+	}
+
+	a {
+		margin: auto;
+		width: 75%;
+		height: 50%;
 	}
 }

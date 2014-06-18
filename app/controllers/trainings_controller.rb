@@ -5,6 +5,26 @@ class TrainingsController < ApplicationController
   # GET /trainings.json
   def index
     @trainings = Training.all
+
+    @trainings.each do |training| 
+      %w{cdl forklift passport twic chevron_bpso_opo exxon msha chevron_powerline oxy_psm_haz pdc_pass nccco_crane_operator medical_exam_certificate api_rp2d_rigger_training oecp}.each do |field_name| 
+          if training[field_name] < 45.days.from_now 
+            if training[field_name] < 15.days.from_now 
+              if !@row_class
+                @row_class = 'danger' 
+              end
+            else 
+              if !@row_class
+                @row_class = 'warning' 
+              end 
+            end 
+          else 
+            if !@row_class
+              @row_class = 'success' 
+            end 
+          end 
+        end
+      end 
   end
 
   # GET /trainings/1

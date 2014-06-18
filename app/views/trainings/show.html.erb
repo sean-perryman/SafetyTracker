@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <div class="well">
-  <table class="table">
+  <table class="table-responsive">
     <tr><td>Name</td><td><%= @training.name %></td></tr>
     <tr><td>Tyvek Size</td><td><%= @training.tyvek_size %></td></tr>
     <tr class="<%= @training_cdl_class %>"><td>CDL</td><td><%= @training.cdl %></td></tr>
-    <tr><td>Forklift</td><td class="<%= @training_forklift_class %>"><%= @training.forklift %></td></tr>
-    <tr><td>Passport</td><td class="<%= @training_passport_class %>"><%= @training.passport %></td></tr>
-    <tr><td>TWIC</td><td class="<%= @training_twic_class %>"><%= @training.twic %></td></tr>
-    <tr><td>Chevron BPSO OPO</td><td class="<%= @training_chevron_bpso_opo_class %>"><%= @training.chevron_bpso_opo %></td></tr>
-    <tr><td>Exxon</td><td class="<%= @training_exxon_class %>"><%= @training.exxon %></td></tr>
-    <tr><td>MSHA</td><td class="<%= @training_msha_class %>"><%= @training.msha %></td></tr>
-    <tr><td>Chevron Powerline</td><td class="<%= @training_chevron_powerline_class %>"><%= @training.chevron_powerline %></td></tr>
-    <tr><td>Oxy PSM Haz</td><td class="<%= @training_oxy_psm_haz_class %>"><%= @training.oxy_psm_haz %></td></tr>
-    <tr><td>PDC Pass</td><td class="<%= @training_pdc_pass_class %>"><%= @training.pdc_pass %></td></tr>
-    <tr><td>NCCCO Crane Operator</td><td class="<%= @training_nccco_crane_operator_class %>"><%= @training.nccco_crane_operator %></td></tr>
-    <tr><td>Medical Exam Certificate</td><td class="<%= @training_medical_exam_certificate_class %>"><%= @training.medical_exam_certificate %></td></tr>
-    <tr><td>API RP2D Rigger Training</td><td class="<%= @training_api_rp2d_rigger_training_class %>"><%= @training.api_rp2d_rigger_training %></td></tr>
-    <tr><td>OECP</td><td class="<%= @training_oecp_class %>"><%= @training.oecp %></td></tr>
+    <tr class="<%= @training_forklift_class %>"><td>Forklift</td><td><%= @training.forklift %></td></tr>
+    <tr class="<%= @training_passport_class %>"><td>Passport</td><td><%= @training.passport %></td></tr>
+    <tr class="<%= @training_twic_class %>"><td>TWIC</td><td><%= @training.twic %></td></tr>
+    <tr class="<%= @training_chevron_bpso_opo_class %>"><td>Chevron BPSO OPO</td><td><%= @training.chevron_bpso_opo %></td></tr>
+    <tr class="<%= @training_exxon_class %>"><td>Exxon</td><td><%= @training.exxon %></td></tr>
+    <tr class="<%= @training_msha_class %>"><td>MSHA</td><td><%= @training.msha %></td></tr>
+    <tr class="<%= @training_chevron_powerline_class %>"><td>Chevron Powerline</td><td><%= @training.chevron_powerline %></td></tr>
+    <tr class="<%= @training_oxy_psm_haz_class %>"><td>Oxy PSM Haz</td><td><%= @training.oxy_psm_haz %></td></tr>
+    <tr class="<%= @training_pdc_pass_class %>"><td>PDC Pass</td><td><%= @training.pdc_pass %></td></tr>
+    <tr class="<%= @training_nccco_crane_operator_class %>"><td>NCCCO Crane Operator</td><td><%= @training.nccco_crane_operator %></td></tr>
+    <tr class="<%= @training_medical_exam_certificate_class %>"><td>Medical Exam Certificate</td><td><%= @training.medical_exam_certificate %></td></tr>
+    <tr class="<%= @training_api_rp2d_rigger_training_class %>"><td>API RP2D Rigger Training</td><td><%= @training.api_rp2d_rigger_training %></td></tr>
+    <tr class="<%= @training_oecp_class %>"><td>OECP</td><td><%= @training.oecp %></td></tr>
   </table>
 </div>
 

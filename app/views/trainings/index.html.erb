@@ -1,4 +1,4 @@
-<h1>All Employees</h1>
+<h1 class="index_title">All Employees</h1>
 
 <div class="table-responsive well">
   <table class="table table-hover table-condensed">
@@ -11,28 +11,9 @@
 
   <tbody>
     <% @trainings.each do |training| %>
-      <% @row_class = 'none' %>
-      <% %w{cdl forklift passport twic chevron_bpso_opo exxon msha chevron_powerline oxy_psm_haz pdc_pass nccco_crane_operator medical_exam_certificate api_rp2d_rigger_training oecp}.each do |field_name| %>
-          
-          <% if training[field_name] < 30.days.from_now %>
-            <% if training[field_name] < 15.days.from_now %>
-              <% @row_class = 'danger' %>
-              <% break %>
-            <% else %>
-              <% @row_class = 'warning' %>
-              <% break %>
-            <% end %>
-          <% else %>
-            <% if @row_class == 'none' %>
-              <% @row_class = 'success' %>
-            <% end %>
-          <% end %>
-
-      <% end %>
       <tr class='main_row <%= @row_class %>' data-link="<%= training_path(training) %>">
-        <td><%= cl_image_tag("preset_folder/podlnns8cqw88187vaxh.jpg", :width => 150, :height => 200, :crop => :fill, :class => 'employee-picture') %></td>
-        <td><%= training.name %></td>
-        <td><%= link_to 'Show', training, :class => 'btn btn-default hidden' %></td>
+        <td><%= cl_image_tag("preset_folder/podlnns8cqw88187vaxh.jpg", :width => 150, :height => 200, :crop => :fill, :class => 'employee-picture center-block') %></td>
+        <td><p class="center-block"><%= training.name %></p></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +21,4 @@
 
 <br>
 
-<%= link_to 'New Employee', new_training_path, :class => "btn btn-default" %>
+<%= link_to 'New Employee', new_training_path, :class => "btn btn-default center-block" %>
