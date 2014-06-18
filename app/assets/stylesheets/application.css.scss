@@ -21,16 +21,31 @@ $font-size-base: 14px;
 body {
 	padding-top: 70px;
 }
+
 table {
 	margin: auto;
-	width: 50%;
 }
+
+.well {
+	margin: auto;
+	max-width: 50%;
+}
+
+.employee-name-label {
+	margin: 0 auto;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
 .employee-picture {
 	border: 1px solid black;
 	float: left;
 }
 
 @media screen and (max-width: 1024px) {
+	th, .index-title, nav, .new-employee-button, .edit-button {
+		display: none;
+	}
 
 	body {
 		padding-top: 20px;
@@ -46,8 +61,18 @@ table {
 		border: 2px solid black;
 	}
 
-	th, .index_title, nav {
-		display: none;
+	a {
+		margin: auto;
+		width: 90%;
+		height: auto;
+	}
+
+	.well {
+		max-width: 90%;
+	}
+
+	.back-button {
+		width: 100%;
 	}
 
 	.employee-picture {
@@ -57,12 +82,6 @@ table {
 		margin: auto;
 	}
 
-	a {
-		margin: auto;
-		width: 90%;
-		height: auto;
-	}
-
 	.show_p {
 		td {
 			font-size: .6em;
@@ -70,6 +89,11 @@ table {
 	}
 
 	.button-font {
-		font-size: 1em;
+		font-size: 1.25em;
+	}
+
+	.checkbox-size {
+		min-height: 80px;
+		min-width: 80px;
 	}
 }
