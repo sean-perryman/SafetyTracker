@@ -102,7 +102,7 @@
         <%= f.input :has_oecp, label: "Has OECP?", label_html: { class: 'col-md-4' }, input_html: { class: 'checkbox-size' } %>
       </div>
       <div class="row">
-        <%= f.input :oecp, label: "OECP Date", wrapper_html: { class: 'hidden' }, :include_blank => true, label_html: { class: 'col-md-4' }, input_html: { class: 'col-md-1' } %>
+        <%= f.input :oecp, label: "OECP Date", :include_blank => true, wrapper_html: { class: 'hidden' }, label_html: { class: 'col-md-4' }, input_html: { class: 'col-md-1' } %>
       </div>
       <div class="row">
         <%= f.button :submit, :class => 'btn-default' %>

@@ -13,3 +13,9 @@ $(document).on "page:change", ->
 	), ->
 	  $(this).find("a").hide()
 	  return
+
+$(document).on "page:change", ->
+  $(".cdl-row").on "click", ->
+    $(".cdl-image").toggleClass "hidden"
+    return
+  return

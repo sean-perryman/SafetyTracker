@@ -1,10 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <div class="well">
+  <div class="overlay">
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'cdl-image cdl-row overlay-image hidden') %> <!-- CDL -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'forklift-image hidden') %> <!-- Forklift -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'passport-image hidden') %> <!-- Passport -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'twic-image hidden') %> <!-- TWIC -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'chevron-bpso-opo-image hidden') %> <!-- Chevron BPSO OPO -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'exxon-image hidden') %> <!-- Exxon -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'msha-image hidden') %> <!-- MSHA -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'chevron-powerline-image hidden') %> <!-- Chevron Powerline -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'oxy-psm-haz-image hidden') %> <!-- OXY PSM Haz -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'pdc-pass-image hidden') %> <!-- PDC Pass -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'nccco-crane-operator-image hidden') %> <!-- NCCCO Crane Operator -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'medical-exam-certificate-image hidden') %> <!-- Medical Exam Certificate -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'api-rp2d-rigger-training-image hidden') %> <!-- API RP2D Rigger Training -->
+    <%= cl_image_tag('preset_folder/podlnns8cqw88187vaxh.jpg', :class => 'oecp-image hidden') %> <!-- OECP -->
+  </div>
   <table class="table table-hover table-responsive show_p">
     <h2 class="center-block employee-name-label"><%= @training.name %></h2>
     <% if @training.cdl != nil %>
-      <tr class="<%= @training.cdl_class %>"><td>CDL</td><td><%= @training.cdl %></td></tr>
+      <tr class="<%= @training.cdl_class %> cdl-row"><td>CDL</td><td><%= @training.cdl %></td></tr>
     <% end %>
     <% if @training.forklift != nil %>
       <tr class="<%= @training.forklift_class %>"><td>Forklift</td><td><%= @training.forklift %></td></tr>
@@ -46,7 +62,7 @@
       <tr class="<%= @training.oecp_class %>"><td>OECP</td><td><%= @training.oecp %></td></tr>
     <% end %>
   </table>
-  
+
   <%= link_to 'Edit', edit_training_path(@training), :class => "btn btn-default button-font edit-button" %>
   <%= link_to 'Back', trainings_path, :class => "btn btn-default button-font back-button" %>
 </div>

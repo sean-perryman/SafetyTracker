@@ -1,3 +1,20 @@
 // Place all the styles related to the Trainings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.overlay-image {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 250px;
+	height: auto;
+}
+
+@media screen and ( max-width: 1024px ) {
+	.overlay-image {
+		position: relative;
+		margin: auto;
+		width: 100%;
+		height: auto;
+	}
+}
