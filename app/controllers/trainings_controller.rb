@@ -10,8 +10,6 @@ class TrainingsController < ApplicationController
   # GET /trainings/1
   # GET /trainings/1.json
   def show
-    
-
   end
 
   # GET /trainings/new
