@@ -3,20 +3,48 @@
 <div class="well">
   <table class="table table-hover table-responsive show_p">
     <h2 class="center-block employee-name-label"><%= @training.name %></h2>
-    <tr class="<%= @training.cdl_class %>"><td>CDL</td><td><%= @training.cdl %></td></tr>
-    <tr class="<%= @training.forklift_class %>"><td>Forklift</td><td><%= @training.forklift %></td></tr>
-    <tr class="<%= @training.passport_class %>"><td>Passport</td><td><%= @training.passport %></td></tr>
-    <tr class="<%= @training.twic_class %>"><td>TWIC</td><td><%= @training.twic %></td></tr>
-    <tr class="<%= @training.chevron_bpso_opo_class %>"><td>Chevron BPSO OPO</td><td><%= @training.chevron_bpso_opo %></td></tr>
-    <tr class="<%= @training.exxon_class %>"><td>Exxon</td><td><%= @training.exxon %></td></tr>
-    <tr class="<%= @training.msha_class %>"><td>MSHA</td><td><%= @training.msha %></td></tr>
-    <tr class="<%= @training.chevron_powerline_class %>"><td>Chevron Powerline</td><td><%= @training.chevron_powerline %></td></tr>
-    <tr class="<%= @training.oxy_psm_haz_class %>"><td>Oxy PSM Haz</td><td><%= @training.oxy_psm_haz %></td></tr>
-    <tr class="<%= @training.pdc_pass_class %>"><td>PDC Pass</td><td><%= @training.pdc_pass %></td></tr>
-    <tr class="<%= @training.nccco_crane_operator_class %>"><td>NCCCO Crane Operator</td><td><%= @training.nccco_crane_operator %></td></tr>
-    <tr class="<%= @training.medical_exam_certificate_class %>"><td>Medical Exam Certificate</td><td><%= @training.medical_exam_certificate %></td></tr>
-    <tr class="<%= @training.api_rp2d_rigger_training_class %>"><td>API RP2D Rigger Training</td><td><%= @training.api_rp2d_rigger_training %></td></tr>
-    <tr class="<%= @training.oecp_class %>"><td>OECP</td><td><%= @training.oecp %></td></tr>
+    <% if @training.cdl != nil %>
+      <tr class="<%= @training.cdl_class %>"><td>CDL</td><td><%= @training.cdl %></td></tr>
+    <% end %>
+    <% if @training.forklift != nil %>
+      <tr class="<%= @training.forklift_class %>"><td>Forklift</td><td><%= @training.forklift %></td></tr>
+    <% end %>
+    <% if @training.passport != nil %>
+      <tr class="<%= @training.passport_class %>"><td>Passport</td><td><%= @training.passport %></td></tr>
+    <% end %>
+    <% if @training.twic != nil %>
+      <tr class="<%= @training.twic_class %>"><td>TWIC</td><td><%= @training.twic %></td></tr>
+    <% end %>
+    <% if @training.chevron_bpso_opo != nil %>
+      <tr class="<%= @training.chevron_bpso_opo_class %>"><td>Chevron BPSO OPO</td><td><%= @training.chevron_bpso_opo %></td></tr>
+    <% end %>
+    <% if @training.exxon != nil %>
+      <tr class="<%= @training.exxon_class %>"><td>Exxon</td><td><%= @training.exxon %></td></tr>
+    <% end %>
+    <% if @training.msha != nil %>
+      <tr class="<%= @training.msha_class %>"><td>MSHA</td><td><%= @training.msha %></td></tr>
+    <% end %>
+    <% if @training.chevron_powerline != nil %>
+      <tr class="<%= @training.chevron_powerline_class %>"><td>Chevron Powerline</td><td><%= @training.chevron_powerline %></td></tr>
+    <% end %>
+    <% if @training.oxy_psm_haz != nil %>
+      <tr class="<%= @training.oxy_psm_haz_class %>"><td>Oxy PSM Haz</td><td><%= @training.oxy_psm_haz %></td></tr>
+    <% end %>
+    <% if @training.pdc_pass != nil %>
+     <tr class="<%= @training.pdc_pass_class %>"><td>PDC Pass</td><td><%= @training.pdc_pass %></td></tr>
+    <% end %>
+    <% if @training.nccco_crane_operator != nil %>
+      <tr class="<%= @training.nccco_crane_operator_class %>"><td>NCCCO Crane Operator</td><td><%= @training.nccco_crane_operator %></td></tr>
+    <% end %>
+    <% if @training.medical_exam_certificate != nil %>
+      <tr class="<%= @training.medical_exam_certificate_class %>"><td>Medical Exam Certificate</td><td><%= @training.medical_exam_certificate %></td></tr>
+    <% end %>
+    <% if @training.api_rp2d_rigger_training != nil %>
+      <tr class="<%= @training.api_rp2d_rigger_training_class %>"><td>API RP2D Rigger Training</td><td><%= @training.api_rp2d_rigger_training  %></td></tr>
+    <% end %>
+    <% if @training.oecp != nil %>
+      <tr class="<%= @training.oecp_class %>"><td>OECP</td><td><%= @training.oecp %></td></tr>
+    <% end %>
   </table>
   
   <%= link_to 'Edit', edit_training_path(@training), :class => "btn btn-default button-font edit-button" %>
