@@ -91,7 +91,9 @@ class Training < ActiveRecord::Base
 	end
 
 	def pdc_pass_class
-	  if self.pdc_pass < 15.days.from_now
+	  if !self.has_pdc_pass
+	  	'hidden'
+	  elsif self.pdc_pass < 15.days.from_now
 	    'danger'
 	  elsif self.pdc_pass < 30.days.from_now
 	    'warning'

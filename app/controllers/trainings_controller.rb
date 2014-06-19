@@ -69,6 +69,6 @@ class TrainingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def training_params
-      params.require(:training).permit(:name, :tyvek_size, :cdl, :forklift, :passport, :twic, :chevron_bpso_opo, :exxon, :msha, :chevron_powerline, :oxy_psm_haz, :pdc_pass, :nccco_crane_operator, :medical_exam_certificate, :api_rp2d_rigger_training, :oecp)
+      params.require(:training).permit(:name, :tyvek_size, :cdl, :forklift, :passport, :twic, :chevron_bpso_opo, :exxon, :msha, :chevron_powerline, :oxy_psm_haz, :pdc_pass, :nccco_crane_operator, :medical_exam_certificate, :api_rp2d_rigger_training, :oecp, :has_cdl, :has_forklift, :has_passport, :has_twic, :has_chevron_bpso_opo, :has_exxon, :has_msha, :has_chevron_powerline, :has_oxy_psm_haz, :has_pdc_pass, :has_nccco_crane_operator, :has_medical_exam_certificate, :has_api_rp2d_rigger_training, :has_oecp)
     end
 end
